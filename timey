@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+
+from datetime import datetime
+import os
+import time
+
+
+def main():
+    os.system("clear")
+    while True:
+        try:
+            print(
+                f"{datetime.now():%d.%m.%Y %I:%M:%S %p}\r",
+                end="",
+            )
+            time.sleep(1)
+        except KeyboardInterrupt:
+            os.system("clear")
+            exit(0)
+
+
+if __name__=="__main__":
+    main()
